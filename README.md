@@ -1,7 +1,7 @@
 # JAVA
 ### 자바에 대한 공부 기록(git-flow연습 적용)
 
-git-flow 적용 방법
+### git-flow 적용 방법
 
  + **feature: 코드연습이 끝난 후(기능추가)**
  + **develop: 코드연습과 블로그 업로드가 끝난 직후**
