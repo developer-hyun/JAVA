@@ -28,6 +28,7 @@
 #### public ,protected , default, private: https://rlckdrkdud.tistory.com/113?category=836826
 #### static: https://rlckdrkdud.tistory.com/114?category=836826
 #### oop(static,생성자,this) :https://rlckdrkdud.tistory.com/115?category=836826
+#### 상속(inheritance) : 
 
 
 
