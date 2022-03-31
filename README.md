@@ -30,6 +30,12 @@
 #### oop(static,생성자,this) :https://rlckdrkdud.tistory.com/115?category=836826
 #### 상속(inheritance) : 
 
+## 2주차
+
+<br>
+
+
+
 
 
 
