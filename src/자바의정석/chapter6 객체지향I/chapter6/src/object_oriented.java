@@ -72,17 +72,39 @@ public class object_oriented {
 //        }
 //    }
 
-        Data1 d = new Data1();
-        d.x=10;
-
-        Data1 d2 = copy(d);
-        System.out.println(d.x);
-        System.out.println(d2.x);
+//        Data1 d = new Data1();
+//        d.x=10;
+//
+//        Data1 d2 = copy(d);
+//        System.out.println(d.x);
+//        System.out.println(d2.x);
+//    }
+//
+//
+//    static Data1 copy (Data1 d) {
+//        Data1 tmp = new Data1();
+//        tmp.x = d.x;
+//        return tmp;
+//    }
+//    int n = factorial(4);
+//        System.out.println(n);
+//
+//    }
+//    static int factorial(int n) {
+//        if (n==1) return 1;
+//        return n * factorial(n-1);
+//    }
+        int x = 2;
+        int n = 5;
+        long result = 0;
+        for (int i=1;i<=n;i++){
+            result +=power(x,i);
+        }
+        System.out.println(result);
     }
-    static Data1 copy (Data1 d) {
-        Data1 tmp = new Data1();
-        tmp.x = d.x;
-        return tmp;
+    static long power(int x , int n) {
+        if (n==1) return x;
+        return x*power(x,n-1);
     }
 }
 
