@@ -1,9 +1,27 @@
 
-import Chapter6_data.rename;
+import Chapter6_data.*;
+
+import java.util.Date;
 
 
 public class object_oriented {
+
+
     public static void main(String args[]) {
+    }
+        void instanceMethod(){}
+        static void staticMethod(){}
+        void instanceMethod2() {
+            instanceMethod();
+            staticMethod();
+        }
+        static void staticMethod2(){
+           // instanceMethod();  //에러
+            staticMethod();
+
+        }
+    }
+
 //        Tv[] tvArr = new Tv[3];
 //
 //        for (int i=0;i<tvArr.length;i++){
@@ -110,19 +128,49 @@ public class object_oriented {
 //        if (n==1) return x;
 //        return x*power(x,n-1);
 //    }
-    rename d1 =new rename();
-    d1.data1 = 1;
-        System.out.println(d1.data1);
-
-    rename d2 = new rename();
-    d2.data1 = 2;
-        System.out.println(d2.data1);
-        System.out.println(d1.data1);
-
-    }
-    
-
-}
+//    rename d1 =new rename();
+//    d1.data1 = 1;
+//    System.out.println(d1.data1);
+//
+////    rename d2 = new rename();
+////    d2.data1 = 2;
+////    System.out.println(d2.data1);
+////    System.out.println(d1.data1);
+//
+//        change(d1);
+//        System.out.println(d1.data1);
+//    }
+//    static void change(rename d) {
+//        d.data1=1000;
+//        System.out.println(d.data1);
+//
+//    }
+//        System.out.println(MyMath2.add(200L,100L));
+//        MyMath2.a=1000L;
+//        System.out.println(MyMath2.a);
+//        MyMath2 mm = new MyMath2();
+//        mm.b = 300L;
+//        System.out.println(mm.add());
+//        Data1 d = new Data1();
+//        d.x = 10;
+//        System.out.println("main" + d.x);
+//
+//        change(d);
+//        System.out.println("after change");
+//        System.out.println("main" +d.x);
+//
+//        Data1 d2 = new Data1();
+//        System.out.println(d2.x);
+//    }
+//    static void change(Data1 d){
+//        d.x=1000;
+//        System.out.println("change" + d.x);
+//    }
+//}
+//
+//class Data1 {
+//    int x;
+//}
 
 //class Data1 {int x;}
 
