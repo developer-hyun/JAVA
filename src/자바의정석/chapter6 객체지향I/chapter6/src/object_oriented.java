@@ -1,4 +1,6 @@
-import javax.xml.crypto.Data;
+
+import Chapter6_data.rename;
+
 
 public class object_oriented {
     public static void main(String args[]) {
@@ -94,21 +96,35 @@ public class object_oriented {
 //        if (n==1) return 1;
 //        return n * factorial(n-1);
 //    }
-        int x = 2;
-        int n = 5;
-        long result = 0;
-        for (int i=1;i<=n;i++){
-            result +=power(x,i);
-        }
-        System.out.println(result);
+//        int x = 2;
+//        int n = 5;
+//        long result = 0;
+//        for (int i=1;i<=n;i++){
+//            result +=power(x,i);
+//        }
+//        System.out.println(result);
+//        Data d1 = new Data();
+//        d1.Data_Function();
+//        }
+//    static long power(int x , int n) {
+//        if (n==1) return x;
+//        return x*power(x,n-1);
+//    }
+    rename d1 =new rename();
+    d1.data1 = 1;
+        System.out.println(d1.data1);
+
+    rename d2 = new rename();
+    d2.data1 = 2;
+        System.out.println(d2.data1);
+        System.out.println(d1.data1);
+
     }
-    static long power(int x , int n) {
-        if (n==1) return x;
-        return x*power(x,n-1);
-    }
+    
+
 }
 
-class Data1 {int x;}
+//class Data1 {int x;}
 
 
 
