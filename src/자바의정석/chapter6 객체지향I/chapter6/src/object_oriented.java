@@ -1,6 +1,7 @@
 
 import Chapter6_data.*;
 
+import java.util.Arrays;
 import java.util.Date;
 
 
@@ -8,18 +9,34 @@ public class object_oriented {
 
 
     public static void main(String args[]) {
+        System.out.println(Arrays.toString(arr));
     }
-        void instanceMethod(){}
-        static void staticMethod(){}
-        void instanceMethod2() {
-            instanceMethod();
-            staticMethod();
-        }
-        static void staticMethod2(){
-           // instanceMethod();  //에러
-            staticMethod();
 
+    static int[] arr = new int[10];
+     static  {
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = (int)(Math.random() * 10);
         }
+    }
+//        int x;
+//        int y;
+//    }
+//    void method() {
+//        int i;
+//        int j =i;
+//    }
+//        void instanceMethod(){}
+//        static void staticMethod(){}
+//        void instanceMethod2() {
+//            instanceMethod();
+//            staticMethod();
+//        }
+//        static void staticMethod2(){
+//           // instanceMethod();  //에러
+//            staticMethod();
+//
+//        }
+
     }
 
 //        Tv[] tvArr = new Tv[3];
