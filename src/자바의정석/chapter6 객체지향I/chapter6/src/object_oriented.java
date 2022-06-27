@@ -10,14 +10,35 @@ public class object_oriented {
 
     public static void main(String args[]) {
         System.out.println(Arrays.toString(arr));
+        System.out.println(PlusString("hi","li","ks"));
     }
 
+//    void instanceMethod(){}
+//    static void staticMethod(){}
+//    void instanceMethod2() {
+//        instanceMethod();
+//        staticMethod();
+//    }
+//    static void staticMethod2(){
+//        instanceMethod();  //에러
+//        staticMethod();
+//
+//    }
+
     static int[] arr = new int[10];
-     static  {
+
+    static {
         for (int i = 0; i < arr.length; i++) {
-            arr[i] = (int)(Math.random() * 10);
+            arr[i] = (int) (Math.random() * 10);
         }
     }
+
+    static String PlusString(String str, String... dlim) {
+        System.out.println(str);
+        System.out.println(Arrays.toString(dlim));
+        return str;
+    }
+}
 //        int x;
 //        int y;
 //    }
@@ -37,7 +58,7 @@ public class object_oriented {
 //
 //        }
 
-    }
+
 
 //        Tv[] tvArr = new Tv[3];
 //
