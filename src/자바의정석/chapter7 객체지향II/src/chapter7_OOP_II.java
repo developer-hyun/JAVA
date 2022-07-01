@@ -25,8 +25,42 @@ public class chapter7_OOP_II {
 //        }
 //    }
 
+//        Tank tank = new Tank();
+//        Marin marin = new Marin();
+//        SCV scv = new SCV();
+//        scv.repair(tank);
+        Card c = new Card("HEART",10);
+        System.out.println(c.NUMBER);
+        System.out.println(c.KIND);
+
+        Card c2 = new Card("DIA",8);
+        System.out.println(c2.NUMBER);
+        System.out.println(c2.KIND);
     }
 }
+
+class Card {
+    final int NUMBER;
+    final String KIND;
+    static int width  = 100;
+    static int height = 250;
+
+    Card (String kind, int number) {
+        this.KIND = kind;
+        this.NUMBER = number;
+    }
+    Card() {
+        this("HEART",1);
+        System.out.println("생성자");
+    }
+    public String toString() {
+        return KIND + " " + NUMBER;
+    }
+}
+
+
+
+
 
 interface Repairable {}
 
@@ -38,13 +72,45 @@ class Unit {
         this.MAX_HP = hp;
     }
 }
-
-
 class GroundUnit extends Unit {
-    GroundUnit(int hp){
+    GroundUnit(int hp) {
         super(hp);
     }
 }
+class AirUnit extends Unit {
+    AirUnit(int hp) {super(hp);}
+}
+class Tank extends GroundUnit implements Repairable {
+    Tank() {
+        super(150);
+        hitPoint = MAX_HP;
+    }
+    public String toString(){
+        return "TANK";
+    }
+}
+class Marin extends GroundUnit{
+    Marin() {
+        super(40);
+        hitPoint = MAX_HP;
+    }
+}
+class SCV extends GroundUnit implements Repairable {
+    SCV() {
+        super(60);
+        hitPoint = MAX_HP;
+    }
+    void repair(Repairable r) {
+        if (r instanceof Unit) {
+            Unit u = (Unit)r;
+            while (u.hitPoint != MAX_HP) {
+                u.hitPoint++;
+            }
+        }
+    }
+}
+
+
 
 
 
