@@ -1,29 +1,42 @@
 public class chapter8 {
     public static void main(String[] args) throws Exception {
-
-
-
-
+        try {
+            startInstall();
+            copyFiles();
+        } catch (SpaceException e) {
+            System.out.println(e.getMessage());
+            System.out.println("공간확보 필요");
+        } catch (MemoryException me) {
+            System.out.println(me.getMessage());
+            System.out.println("다시 설치를 시도");
+        } finally {
+            deleteTempFiles();
+        }
     }
 
-    static void startInstall() throws SpaceException,MemoryException { //생성한 예외처리 호출
-//        if (!enoughSpace()) {
-//            throw new SpaceException("설치할 공간 부족");
-//        }
-//        if (!enoughMeory()){
-//            throw new MemoryException("설치할 메모리 부족");
-//        }
+    static void startInstall() throws SpaceException, MemoryException { //생성한 예외처리 호출
+        if (!enoughMeory()) {
+            throw new MemoryException("메모리 확보");
+        }
+        if (!enoughSpace()) {
+            throw new SpaceException("공간 부족");
+        }
     }
 
-    static void copyFiles() {}
-    static void deleteTempFiles() {}
+    static void copyFiles() {
+    }
+
+    static void deleteTempFiles() {
+    }
 
     static boolean enoughSpace() {
         return true;
     }
+
     static boolean enoughMeory() {
         return false;
     }
+}
 
 
     class SpaceException extends RuntimeException {
@@ -92,5 +105,5 @@ public class chapter8 {
 //        }
 //        System.out.println(7);
 //    }
-}
+
 
