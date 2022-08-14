@@ -1,3 +1,6 @@
+import java.io.FileOutputStream;
+import java.io.FilterOutputStream;
+import java.security.KeyStore;
 import java.util.*;
 
 import chapter11.MyVecotor;
@@ -119,16 +122,80 @@ public class chapter11 {
 
 
 
-            Object[] objArr = {"1",1,"2","3","3","2"};
-            Set set = new HashSet();
+//            Object[] objArr = {"1",1,"2","3","3","2"};
+//            Set set = new HashSet();
+//
+//            for (int i=0;i< objArr.length;i++){
+//                set.add(objArr[i]);
+//
+//            }
+//        System.out.println(set);
 
-            for (int i=0;i< objArr.length;i++){
-                set.add(objArr[i]);
+//        HashMap map  = new HashMap();
+//        map.put("he","1234");
+//
+//        Map map  =new HashMap();
+//        map.put("first","1111");
+//        map.put("second","2222"); //데이터넣기
+//        System.out.println(map);
+//
+//        Set set  = map.keySet(); //키값은 set에다가 넣음
+//        System.out.println(set); //키값만 추출함
+//
+//        System.out.println(map.values()); // 값들만 추출함
+//
+//        System.out.println(map.get("first")); //키값에 따른 value값을 추출함
+//        System.out.println(map.getOrDefault("third","x")); //키값이 third가 없으면 x를 반환해라
+//
+//        //map.remove("first"); //map의 원소를 삭제함
+//
+//
+//        Set set2  =map.entrySet(); // 또는 map.keySet() Iteraotr는 map을 지원하지 않기 때문에 set으로 바꿔야함
+//        Iterator it = set2.iterator();
+//
+//      //  키값만 출력
+//        while(it.hasNext()) {
+//            System.out.println(it.next());
+//        }
+//
+//        //value값도 출력
+//        while(it.hasNext()) {
+//            Map.Entry en = (Map.Entry) it.next();
+//            System.out.println(en.getKey());
+//            System.out.println(en.getValue());
+//        }
 
-            }
-        System.out.println(set);
+
+        Map map2 = new TreeMap();
+        map2.put("frist",1111);
+        map2.put("zero",2222);
+        map2.put("aaa",3333);
+        System.out.println(map2); //정렬된 상태로 출력
+
+
+        Properties p = new Properties();
+        p.setProperty("autosave","5");
+        p.setProperty("language","한글");
+
+        System.out.println(p.getProperty("autosave"));//autosave값 찾기
+
+        try { //파일로 저장하기
+            p.store(new FileOutputStream("out.txt"),"pro Ex");
+            p.storeToXML(new FileOutputStream("out.xml"),"pro.xm");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
+        List list = new ArrayList();
+
+
+
+
+
+
     }
-    
+
 
 }
 
