@@ -187,7 +187,15 @@ public class chapter11 {
         }
 
 
-        List list = new ArrayList();
+        ArrayList<Integer> list = new ArrayList<Integer>(); //integer만 들어감
+
+        ArrayList<Object> list1 = new ArrayList<Object>(); //모든 형태를 넣으려면
+        list1.add(10);
+        list1.add("20");
+        String i = (String)list1.get(1); //list.get이 Object여서 형변환을 해주어야함
+
+
+
 
 
 
