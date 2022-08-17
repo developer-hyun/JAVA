@@ -1,9 +1,5 @@
 import java.io.FileOutputStream;
-import java.io.FilterOutputStream;
-import java.security.KeyStore;
 import java.util.*;
-
-import chapter11.MyVecotor;
 
 public class chapter11 {
     public static void main(String[] args) {
@@ -195,16 +191,48 @@ public class chapter11 {
         String i = (String)list1.get(1); //list.get이 Object여서 형변환을 해주어야함
 
 
-
-
-
-
-
+//        HashMap<String,Value> map = new HashMap<>(); //생성자에는 형을 지정하지않아도됨
+//        map.put("hello",new Value("자바","파이썬"));
+//
+//        class FruitBox<T extends Fruit> {}
+//        FruitBox<Apple> apple = new FruitBox<Apple>();
 
 
     }
+}
+class Unit {
+    int x,y;
+    enum Driection { EAST(5) , SOUTH(3); //;가 있어야함
+
+        private final int value; //인스터스 변수 추가가
+
+        Driection(int value) { this.value = value;} //생성자 추가
+
+        public int getValue() { return value};
+   };
+    Driection dir; //열거형 인스턴스 변수
+
+    void init() {
+        dir = Driection.EAST; //EAST로 초기화
+    }
+
+    void compare() {
+        if (dir == Driection.EAST) {  //비교는 ==와 compare만 가능 비교연산자불가능
+            x++;
+    }
+        else if (dir.compareTo(Driection.SOUTH) > 0) {}
+}
 
 
+
+class Card {
+    Card(Kind kind) {
+        this.kind = kind;
+    }
+
+    enum Kind { CLOVER , HERAT , DIAMOND}
+
+    final Kind kind;
 }
 
 
