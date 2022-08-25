@@ -201,15 +201,21 @@ public class chapter11 {
     }
 }
 class Unit {
-    int x,y;
-    enum Driection { EAST(5) , SOUTH(3); //;가 있어야함
+    int x, y;
+
+    enum Driection {
+        EAST(5), SOUTH(3); //;가 있어야함
 
         private final int value; //인스터스 변수 추가가
 
-        Driection(int value) { this.value = value;} //생성자 추가
+        Driection(int value) {
+            this.value = value;
+        } //생성자 추가
 
-        public int getValue() { return value};
-   };
+//        public int getValue() { return value};
+    }
+
+    ;
     Driection dir; //열거형 인스턴스 변수
 
     void init() {
@@ -219,20 +225,20 @@ class Unit {
     void compare() {
         if (dir == Driection.EAST) {  //비교는 ==와 compare만 가능 비교연산자불가능
             x++;
-    }
-        else if (dir.compareTo(Driection.SOUTH) > 0) {}
-}
-
-
-
-class Card {
-    Card(Kind kind) {
-        this.kind = kind;
+        } else if (dir.compareTo(Driection.SOUTH) > 0) {
+        }
     }
 
-    enum Kind { CLOVER , HERAT , DIAMOND}
 
-    final Kind kind;
+    class Card {
+        Card(Kind kind) {
+            this.kind = kind;
+        }
+
+        enum Kind {CLOVER, HERAT, DIAMOND}
+
+        final Kind kind;
+    }
 }
 
 
