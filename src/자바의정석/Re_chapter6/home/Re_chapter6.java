@@ -1,3 +1,5 @@
+package home;
+
 public class Re_chapter6 {
     public static void main(String[] args) {
 
@@ -16,9 +18,7 @@ public class Re_chapter6 {
 }
 
 class Test {
-
     Test() {}
-
-
-
 }
+
+
