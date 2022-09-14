@@ -9,5 +9,13 @@ public class pacT {
 
 
     }
+    pacT() {}
+
+    public static void methodA() {}
 }
+
+class example {
+
+}
+
 
